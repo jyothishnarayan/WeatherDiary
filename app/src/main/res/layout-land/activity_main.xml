@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:background="@drawable/clouds"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_weight="50"
+        android:gravity="center"
+        android:id="@+id/relativeContent"
+        android:elevation="5dp">
+        <TextView
+            android:id="@+id/location"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Bengaluru" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:text="Date"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="3dp"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_below="@id/date"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/temperature"
+            android:textSize="80dp"
+            android:textColor="@color/colorText"
+            android:text="22"
+            android:gravity="center"/>
+        <TextView
+            android:layout_below="@id/temperature"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/minMaxTemperature"
+            android:textSize="24dp"
+            android:textColor="@color/colorText"
+            android:text="27/16"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/relativeContent"
+        android:layout_weight="50">
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textColor="@color/colorText"
+            android:text="Description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginTop="12dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="20dp"
+                android:text="Humidity" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="20dp"
+                android:text="Pressure" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
